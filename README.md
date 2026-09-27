@@ -18,6 +18,8 @@ Most safety work starts after launch, when the first harm shows up in the news o
 2. **See the risk picture.** 58 risks scored for severity and likelihood, each showing the answers that raised or lowered it.
 3. **Act on it.** A prioritized plan from 104 safeguards with owners and effort, plus the obligations that apply in each market.
 
+Send the launch plan to Jira, Asana or Linear as a CSV, or open each action as a pre-filled Jira, Linear or GitHub issue.
+
 ## What's in this repo
 
 The tool's knowledge, published as open content you can read, reuse and adapt.
