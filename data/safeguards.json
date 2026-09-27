@@ -1,0 +1,626 @@
+[
+  {
+    "id": "report_btn",
+    "safeguard": "In-product reporting on every user, message, post and listing, with reasons that match your policies",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "block_mute",
+    "safeguard": "Block and mute, where a block stops all contact and hides the person who blocked",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "review_queue",
+    "safeguard": "A review queue with a named owner, response times by severity and an escalation path",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "policies",
+    "safeguard": "Written community guidelines that cover these harms, with examples of what crosses the line",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "appeals",
+    "safeguard": "Appeals for enforcement decisions, reviewed by someone other than the original reviewer",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "sor",
+    "safeguard": "Tell users which rule they broke, what action was taken and how to appeal",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "notice_action",
+    "safeguard": "A notice channel for illegal-content reports from users, authorities and trusted flaggers",
+    "owner": "Legal & Compliance",
+    "effort": "Small effort"
+  },
+  {
+    "id": "enforcement_log",
+    "safeguard": "Log every enforcement action (what, why, who, when) for audits and transparency reports",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "qa_program",
+    "safeguard": "Quality sampling of moderation decisions to catch errors and inconsistency",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "rate_limits",
+    "safeguard": "Rate limits on posting, messaging, invites and account actions, stricter for new accounts",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "new_account_limits",
+    "safeguard": "Limited abilities for new accounts until they build trust, such as no links or messages to strangers",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "captcha",
+    "safeguard": "Bot friction at sign-up (e.g. Cloudflare Turnstile or reCAPTCHA) and blocking of disposable emails",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "phone_email_verify",
+    "safeguard": "Email or phone verification before posting, messaging or claiming rewards",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "device_signals",
+    "safeguard": "Device, network and behavior signals to link duplicate, banned and fake accounts",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "text_screening",
+    "safeguard": "Automated screening of text for abuse, spam and scam patterns, routed to human review",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "link_scanning",
+    "safeguard": "Check links against phishing and malware lists (e.g. Google Safe Browsing) before they are clickable",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "file_scanning",
+    "safeguard": "Malware scanning of uploaded files and blocking of executable file types",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "media_classifier",
+    "safeguard": "Nudity, violence and gore detection on uploads, with sensitive media behind a warning screen",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "dm_nudity_blur",
+    "safeguard": "Blur explicit images in private messages by default, with a warning and one-tap reporting",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "csam_hash",
+    "safeguard": "Hash-match every image and video against known CSAM (e.g. PhotoDNA, Thorn's Safer, NCMEC and IWF hash lists)",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "csam_reporting",
+    "safeguard": "A documented process to report apparent CSAM to NCMEC (US) and national authorities, preserving evidence",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "csam_review",
+    "safeguard": "A restricted escalation path for child-safety cases, handled by specially trained and supported reviewers",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "minor_contact",
+    "safeguard": "Adults can't find or message minors they aren't connected to, and minors' accounts are private by default",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "age_assurance",
+    "safeguard": "Age assurance proportionate to the risk: age estimation or ID checks where the law or the harm requires it",
+    "owner": "Product",
+    "effort": "Large effort"
+  },
+  {
+    "id": "teen_defaults",
+    "safeguard": "Age-appropriate defaults for under-18s: private account, limited discovery, sensitive content filtered, location off",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "grooming_signals",
+    "safeguard": "Detection of grooming signals: adults contacting many minors, requests to move apps, gifts or money to minors",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "parental_consent",
+    "safeguard": "Verifiable parental consent before collecting personal data from under-13s",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "parental_tools",
+    "safeguard": "Parental controls and visibility suited to the age group",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "no_minor_ads",
+    "safeguard": "No profiling-based advertising to minors",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "data_minimization",
+    "safeguard": "Collect only the personal data the feature needs, with retention limits",
+    "owner": "Legal & Compliance",
+    "effort": "Small effort"
+  },
+  {
+    "id": "design_review_minors",
+    "safeguard": "Review the design for manipulative patterns such as streaks, endless feeds, autoplay and pressure to spend",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "spending_controls",
+    "safeguard": "Spending limits and purchase confirmations for minors, and odds disclosure for randomized items",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "underage_removal",
+    "safeguard": "A way to report suspected under-age accounts and remove them",
+    "owner": "T&S Ops",
+    "effort": "Small effort"
+  },
+  {
+    "id": "takeitdown",
+    "safeguard": "Point teens to NCMEC's Take It Down and adults to StopNCII.org, and hash-match those submissions",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "ncii_process",
+    "safeguard": "A fast-track removal process for intimate images shared without consent (48 hours under the US TAKE IT DOWN Act)",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "creator_verification",
+    "safeguard": "Verify the identity, age and consent of everyone who appears in sexual content before it is published",
+    "owner": "Legal & Compliance",
+    "effort": "Large effort"
+  },
+  {
+    "id": "trafficking_training",
+    "safeguard": "Train reviewers on trafficking indicators and set up referral paths to law enforcement and NGOs",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "sextortion_signals",
+    "safeguard": "Detect sextortion patterns (new accounts requesting images, then payment demands) and warn targets",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "scam_warnings",
+    "safeguard": "In-context warnings when someone asks for money, crypto, gift cards or to move off the platform",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "scam_detection",
+    "safeguard": "Scam-pattern detection across messages and profiles: scripts, reused photos, payment requests",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "support_messaging",
+    "safeguard": "Tell users what your staff will never ask for, and label official accounts",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "impersonation_flow",
+    "safeguard": "An impersonation report flow, verified badges and protected names for notable accounts and your brand",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "payout_holds",
+    "safeguard": "Payout holds and velocity limits for new sellers, creators, hosts and payees",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "escrow_protection",
+    "safeguard": "Buyer protection: funds released after delivery, with a clear dispute process",
+    "owner": "Product",
+    "effort": "Large effort"
+  },
+  {
+    "id": "seller_verification",
+    "safeguard": "Verify high-volume sellers' identity, business and bank details",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "listing_screening",
+    "safeguard": "Screen listings for prohibited, counterfeit and misleading items when they go live",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "payment_risk",
+    "safeguard": "Payment risk scoring, strong customer authentication (3-D Secure) and chargeback monitoring",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "promo_caps",
+    "safeguard": "Cap rewards per person, device and payment method, and release them after a delay",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "confirmation_payee",
+    "safeguard": "Name checks on new payees, warnings for first-time and large transfers, and cooling-off periods",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "mfa",
+    "safeguard": "Multi-factor authentication, with stronger options than SMS for high-value accounts",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "breached_pw",
+    "safeguard": "Block breached passwords and detect credential-stuffing attacks",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "account_recovery",
+    "safeguard": "Hardened account recovery, with alerts for new devices and changes to email, phone or payout details",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "review_integrity",
+    "safeguard": "Only verified customers can review, with detection of review bursts, swaps and linked reviewers",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "review_policy",
+    "safeguard": "A review-moderation policy that never suppresses genuine negative reviews",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "kyc",
+    "safeguard": "Identity verification (KYC) before money can be sent, received or paid out",
+    "owner": "Legal & Compliance",
+    "effort": "Large effort"
+  },
+  {
+    "id": "aml_monitoring",
+    "safeguard": "Transaction monitoring for laundering and mule patterns, with suspicious activity reporting",
+    "owner": "Legal & Compliance",
+    "effort": "Large effort"
+  },
+  {
+    "id": "sanctions",
+    "safeguard": "Sanctions screening of users and counterparties (e.g. OFAC, EU and UK lists) plus geo-restrictions",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "mule_detection",
+    "safeguard": "Detect money-mule behavior: funds passing straight through, many unrelated senders, recruitment messages",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "vulnerable_customers",
+    "safeguard": "A vulnerable-customer policy for spotting signs of financial difficulty or coercion and adjusting treatment",
+    "owner": "Policy",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "affordability",
+    "safeguard": "Affordability and suitability checks before credit or high-risk products",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "comment_controls",
+    "safeguard": "Controls for people to limit who can reply to, tag, mention or message them",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "pii_policy",
+    "safeguard": "A private-information policy with fast removal of doxxing, and detection of posted addresses and phone numbers",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "threat_escalation",
+    "safeguard": "An escalation path for credible threats, including emergency disclosure to law enforcement",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "terror_hash",
+    "safeguard": "Hash-sharing for terrorist content (e.g. GIFCT) and a crisis protocol for live attacks",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "tco_removal",
+    "safeguard": "Ability to remove terrorist content within one hour of an EU removal order",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "live_controls",
+    "safeguard": "Eligibility rules for going live, instant stream shutdown and 24/7 on-call coverage",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "crisis_resources",
+    "safeguard": "Crisis resources and helplines shown when self-harm content, searches or messages are detected",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "search_interventions",
+    "safeguard": "Block or add warning screens to searches linked to self-harm, eating disorders, child abuse and extremism",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "rec_safety",
+    "safeguard": "Keep borderline and sensitive content out of recommendations, especially for teens",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "crisis_escalation",
+    "safeguard": "A protocol for imminent-risk cases, including referral to emergency services",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "trend_monitoring",
+    "safeguard": "Monitoring for emerging harmful trends and challenges",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "health_info",
+    "safeguard": "Authoritative health information and a clear medical-misinformation policy",
+    "owner": "Policy",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "gen_filters",
+    "safeguard": "Input and output filters for disallowed generations: sexual content involving minors, real-person sexual imagery, weapons",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "gen_training_data",
+    "safeguard": "Screen training and fine-tuning data for CSAM and non-consensual imagery",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "gen_provenance",
+    "safeguard": "Label AI-generated media and attach provenance data (e.g. C2PA content credentials)",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "gen_redteam",
+    "safeguard": "Red-team before launch and after each model update, and track the jailbreak success rate",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "likeness_policy",
+    "safeguard": "Block sexual or deceptive generations of real, identifiable people",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "ai_disclosure",
+    "safeguard": "Clearly and repeatedly tell users they are talking to an AI",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "companion_safeguards",
+    "safeguard": "Detect crisis signals in conversations, route people to help, and block romantic or sexual roleplay with minors",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "tool_permissions",
+    "safeguard": "Limit what AI agents and tools can do, and keep untrusted content separate from instructions",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "ai_abuse_monitoring",
+    "safeguard": "Monitor for abuse patterns and act against accounts, not just single prompts",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "approx_location",
+    "safeguard": "Approximate location by default; precise location is opt-in, time-limited and never shown to strangers",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "exif_strip",
+    "safeguard": "Strip GPS and device metadata from uploaded photos",
+    "owner": "Engineering",
+    "effort": "Small effort"
+  },
+  {
+    "id": "anti_scraping",
+    "safeguard": "Anti-scraping controls: rate limits, bot detection and limits on bulk profile access",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "api_governance",
+    "safeguard": "API access review, keys, quotas and developer terms you actually enforce",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "access_controls",
+    "safeguard": "Least-privilege access to user data and review tools, with audit logs",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "camera_policy",
+    "safeguard": "Rules requiring hosts to disclose any cameras, with fast reporting for guests",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "provider_verification",
+    "safeguard": "Identity verification for people offering in-person services, plus background checks where lawful",
+    "owner": "Legal & Compliance",
+    "effort": "Large effort"
+  },
+  {
+    "id": "reverify",
+    "safeguard": "Periodic selfie re-verification to stop accounts being shared or rented",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "safety_features",
+    "safeguard": "In-app safety tools: share trip or date details, an emergency button, check-ins",
+    "owner": "Product",
+    "effort": "Large effort"
+  },
+  {
+    "id": "offline_incidents",
+    "safeguard": "A response process for offline harm, with victim support and law-enforcement liaison",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "two_way_ratings",
+    "safeguard": "Two-way ratings, and removal of users who put others at risk",
+    "owner": "Product",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "anti_discrimination",
+    "safeguard": "An anti-discrimination policy, with testing of algorithms and of host or provider decisions",
+    "owner": "Policy",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "cib_detection",
+    "safeguard": "Detection of coordinated networks of fake or controlled accounts",
+    "owner": "Engineering",
+    "effort": "Large effort"
+  },
+  {
+    "id": "election_plan",
+    "safeguard": "An elections integrity plan, with verification for political ads and a misinformation policy",
+    "owner": "Policy",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "ad_review",
+    "safeguard": "Advertiser verification and ad review for scams, prohibited categories and discriminatory targeting",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "ip_takedown",
+    "safeguard": "Notice-and-takedown for copyright and trademark (e.g. DMCA), with a repeat-infringer policy",
+    "owner": "Legal & Compliance",
+    "effort": "Small effort"
+  },
+  {
+    "id": "prohibited_policy",
+    "safeguard": "A prohibited goods and services policy, with keyword and image screening",
+    "owner": "Policy",
+    "effort": "Small effort"
+  },
+  {
+    "id": "safety_owner",
+    "safeguard": "One named owner for safety, plus an on-call rotation for urgent escalations",
+    "owner": "T&S Ops",
+    "effort": "Small effort"
+  },
+  {
+    "id": "le_process",
+    "safeguard": "A law-enforcement request process: published guidelines, emergency disclosure and data preservation",
+    "owner": "Legal & Compliance",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "guest_limits",
+    "safeguard": "Limit what guests can do: no private messaging, uploads, live or payouts until they create an account",
+    "owner": "Product",
+    "effort": "Small effort"
+  },
+  {
+    "id": "guest_signals",
+    "safeguard": "Session, device and network signals to rate-limit and block abusive guests, since there is no account to ban",
+    "owner": "Engineering",
+    "effort": "Medium effort"
+  },
+  {
+    "id": "guest_evidence",
+    "safeguard": "Keep guest session records long enough to investigate reports and answer law-enforcement requests",
+    "owner": "Legal & Compliance",
+    "effort": "Small effort"
+  },
+  {
+    "id": "moderator_wellness",
+    "safeguard": "Moderator wellness: exposure caps, blurred or grayscale review tools and counseling",
+    "owner": "T&S Ops",
+    "effort": "Medium effort"
+  }
+]

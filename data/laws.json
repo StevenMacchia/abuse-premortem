@@ -1,0 +1,285 @@
+[
+  {
+    "jurisdiction": "United States",
+    "law": "Federal CSAM reporting duty (18 U.S.C. § 2258A)",
+    "summary": "Report apparent child sexual abuse material to NCMEC's CyberTipline when you become aware of it, and preserve the content and related data. The 2024 REPORT Act extended preservation to one year.",
+    "safeguards": [
+      "csam_reporting"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "Children's Online Privacy Protection Act (COPPA)",
+    "summary": "Get verifiable parental consent before collecting personal information from under-13s, whether your service is aimed at children or you know a user is under 13. The FTC's 2025 amendments added separate consent for sharing children's data for advertising and a written data-retention policy.",
+    "safeguards": [
+      "parental_consent",
+      "data_minimization"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "TAKE IT DOWN Act",
+    "summary": "Give people a way to request removal of non-consensual intimate images, including AI-generated ones, and remove them within 48 hours of a valid request. Platform duties took effect in May 2026.",
+    "safeguards": [
+      "ncii_process"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "INFORM Consumers Act",
+    "summary": "Marketplaces must collect and verify identity, bank and contact details from high-volume third-party sellers (200+ sales and $5,000+ in a year), and let buyers report suspicious conduct.",
+    "safeguards": [
+      "seller_verification"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "FTC rule on consumer reviews and testimonials",
+    "summary": "Bans fake reviews (including AI-generated ones), buying positive or negative reviews, and suppressing honest negative reviews. Violations carry civil penalties.",
+    "safeguards": [
+      "review_policy"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "Bank Secrecy Act, AML and OFAC sanctions",
+    "summary": "Money transmitters and other financial institutions need an AML program, customer identification, suspicious activity reports and sanctions screening. State money-transmitter licenses may also apply unless a licensed partner carries these duties.",
+    "safeguards": [
+      "kyc",
+      "aml_monitoring",
+      "sanctions"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "Electronic Fund Transfer Act (Regulation E)",
+    "summary": "Consumer accounts that move money electronically must follow error-resolution procedures and limit consumer liability for unauthorized transfers.",
+    "safeguards": []
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "State AI companion chatbot laws (e.g. California, New York)",
+    "summary": "Disclose that users are talking to an AI, keep protocols for responding to suicidal ideation and self-harm, and add protections for known minors. Requirements vary by state.",
+    "safeguards": [
+      "ai_disclosure",
+      "companion_safeguards"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "State age-verification laws for adult content",
+    "summary": "Many states require reliable age verification before users can reach sexually explicit material. The Supreme Court upheld Texas's law in 2025.",
+    "safeguards": [
+      "age_assurance"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "State children's online safety and design laws",
+    "summary": "Several states (including Utah, Texas, New York and California) regulate minors' accounts, feeds, parental consent or product design. Requirements differ, and several laws are being challenged in court.",
+    "safeguards": [
+      "teen_defaults",
+      "parental_tools"
+    ]
+  },
+  {
+    "jurisdiction": "United States",
+    "law": "Fair housing, fair lending and equal-employment laws",
+    "summary": "Rental decisions, credit decisions and housing, job or credit ads must not discriminate on protected characteristics, including through targeting or algorithms.",
+    "safeguards": [
+      "anti_discrimination"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "Digital Services Act: core duties",
+    "summary": "Hosting services need notice-and-action for illegal content and a statement of reasons for every restriction. Online platforms also need internal complaint handling, priority for trusted flaggers, no dark patterns and transparency reporting.",
+    "safeguards": [
+      "notice_action",
+      "sor",
+      "appeals"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "Digital Services Act Article 28: protection of minors",
+    "summary": "Platforms accessible to minors must ensure a high level of privacy, safety and security for them (the Commission's 2025 guidelines cover age assurance, default settings and recommender systems) and must not target them with profiling-based ads.",
+    "safeguards": [
+      "teen_defaults",
+      "no_minor_ads"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "Digital Services Act: trader traceability",
+    "summary": "Marketplaces must collect, and make best efforts to verify, traders' identity and contact details before they can sell, and inform consumers who bought illegal products.",
+    "safeguards": [
+      "seller_verification"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "Digital Services Act: very large platforms",
+    "summary": "If you reach 45 million monthly users in the EU, you must also assess and mitigate systemic risks each year, undergo independent audits, give researchers data access and offer a feed that isn't based on profiling.",
+    "safeguards": []
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "Terrorist Content Online Regulation",
+    "summary": "Remove or disable terrorist content within one hour of a removal order from a national authority, and keep a point of contact available.",
+    "safeguards": [
+      "tco_removal"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "General Data Protection Regulation (GDPR)",
+    "summary": "Have a lawful basis for processing, minimize data and run impact assessments for high-risk processing. Children's consent to online services needs parental authorization below an age set by each country (13 to 16).",
+    "safeguards": [
+      "data_minimization",
+      "access_controls"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "EU AI Act: transparency duties",
+    "summary": "From August 2026, tell people when they are interacting with an AI system, and mark AI-generated or manipulated content, including deepfakes, in a machine-readable way. Check for any changes to timelines.",
+    "safeguards": [
+      "ai_disclosure",
+      "gen_provenance"
+    ]
+  },
+  {
+    "jurisdiction": "European Union",
+    "law": "EU anti-money-laundering rules, PSD2 and MiCA",
+    "summary": "Payment and crypto businesses need authorization, customer due diligence, transaction monitoring and suspicious-transaction reporting. PSD2 requires strong customer authentication; crypto-asset service providers need authorization under MiCA.",
+    "safeguards": [
+      "kyc",
+      "aml_monitoring",
+      "payment_risk"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "Online Safety Act: illegal harms duties",
+    "summary": "Complete an illegal content risk assessment and take proportionate measures against priority illegal harms such as CSAM, grooming, terrorism and fraud, with accessible reporting and complaints. In force since March 2025.",
+    "safeguards": [
+      "report_btn",
+      "review_queue",
+      "policies"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "Online Safety Act: children's safety duties",
+    "summary": "If children are likely to access the service, complete a children's risk assessment and protect them from harmful content. Since July 2025, services that allow pornography or suicide, self-harm or eating-disorder content need highly effective age assurance to keep children from it.",
+    "safeguards": [
+      "teen_defaults",
+      "age_assurance"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "Online Safety Act: age checks for pornography",
+    "summary": "Services with pornographic content must use highly effective age assurance, such as facial age estimation, ID checks or open banking. Self-declaration is not enough.",
+    "safeguards": [
+      "age_assurance"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "Age Appropriate Design Code (Children's Code)",
+    "summary": "Services likely to be accessed by under-18s must default to high privacy, switch geolocation and profiling off by default, and avoid nudge techniques that weaken privacy.",
+    "safeguards": [
+      "teen_defaults",
+      "design_review_minors"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "APP fraud mandatory reimbursement",
+    "summary": "Payment firms must reimburse most victims of authorised push payment scams, up to £85,000 per claim, with the cost split between the sending and receiving firms.",
+    "safeguards": [
+      "confirmation_payee"
+    ]
+  },
+  {
+    "jurisdiction": "United Kingdom",
+    "law": "FCA rules: Consumer Duty, AML and financial promotions",
+    "summary": "Regulated firms must deliver good outcomes, including for customers in vulnerable circumstances. Crypto firms need FCA registration for AML and must follow the financial promotions rules.",
+    "safeguards": [
+      "vulnerable_customers"
+    ]
+  },
+  {
+    "jurisdiction": "Australia",
+    "law": "Online Safety Act 2021 and industry codes",
+    "summary": "Respond to eSafety Commissioner removal notices within 24 hours (image-based abuse, cyberbullying of children, adult cyber-abuse and seriously harmful content), meet the Basic Online Safety Expectations and follow registered industry codes.",
+    "safeguards": [
+      "ncii_process",
+      "review_queue"
+    ]
+  },
+  {
+    "jurisdiction": "Australia",
+    "law": "Social media minimum age (under-16s)",
+    "summary": "Since December 2025, age-restricted social media platforms must take reasonable steps to stop under-16s from having accounts. Messaging, online gaming, education and health services are largely excluded.",
+    "safeguards": [
+      "age_assurance",
+      "underage_removal"
+    ]
+  },
+  {
+    "jurisdiction": "Canada",
+    "law": "Mandatory reporting of child sexual abuse material",
+    "summary": "Internet service providers must report CSAM they are told about to the Canadian Centre for Child Protection, and notify police and preserve data when they believe an offence was committed using their service.",
+    "safeguards": [
+      "csam_reporting"
+    ]
+  },
+  {
+    "jurisdiction": "Canada",
+    "law": "Proceeds of Crime (Money Laundering) and Terrorist Financing Act",
+    "summary": "Money services businesses, including crypto dealers, must register with FINTRAC, verify identity, keep records and report suspicious and large transactions.",
+    "safeguards": [
+      "kyc",
+      "aml_monitoring"
+    ]
+  },
+  {
+    "jurisdiction": "India",
+    "law": "IT (Intermediary Guidelines and Digital Media Ethics Code) Rules",
+    "summary": "Appoint a grievance officer, acknowledge complaints within 24 hours and resolve them within 15 days, and remove non-consensual intimate imagery within 24 hours of a complaint. Significant platforms (5M+ users in India) have extra duties, and recent amendments address AI-generated content.",
+    "safeguards": [
+      "report_btn",
+      "ncii_process"
+    ]
+  },
+  {
+    "jurisdiction": "India",
+    "law": "Digital Personal Data Protection Act 2023",
+    "summary": "Get verifiable parental consent before processing personal data of anyone under 18, and don't track, behaviorally monitor or target ads at children. Obligations are phasing in under rules issued in 2025.",
+    "safeguards": [
+      "parental_consent",
+      "no_minor_ads"
+    ]
+  },
+  {
+    "jurisdiction": "Brazil",
+    "law": "Digital Statute of Children and Adolescents (ECA Digital)",
+    "summary": "Enacted in 2025. Products aimed at or likely to be accessed by minors need age verification beyond self-declaration, parental supervision tools and protective defaults, and loot boxes are banned in games for minors.",
+    "safeguards": [
+      "age_assurance",
+      "parental_tools",
+      "teen_defaults"
+    ]
+  },
+  {
+    "jurisdiction": "Brazil",
+    "law": "General Data Protection Law (LGPD)",
+    "summary": "Process personal data on a legal basis and in the best interests of children and adolescents, with specific parental consent for children's data.",
+    "safeguards": [
+      "data_minimization"
+    ]
+  }
+]
