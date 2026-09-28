@@ -40,6 +40,8 @@ The tool's knowledge, published as open content you can read, reuse and adapt.
 
 ## More screenshots
 
+![premortem-changed](assets/premortem-changed.png)
+
 ![premortem](assets/premortem.png)
 
 ![premortem-laws](assets/premortem-laws.png)
