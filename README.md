@@ -4,7 +4,7 @@
 
 Answer 12 plain-language questions about a product or feature. Get a scored risk register, the five things to do first, a launch checklist with owners, and the laws that likely apply (each linked to its official source), before anyone gets hurt.
 
-**[Try it live](https://stevenmacchia.github.io/ts-workbench/#premortem)** · part of [T&S Workbench](https://github.com/stevenmacchia/ts-workbench) · free, no sign-up
+**[Try it live](https://stevenmacchia.com/ts-workbench/#premortem)** · part of [T&S Workbench](https://github.com/stevenmacchia/ts-workbench) · free, no sign-up
 
 ![Abuse Pre-mortem](assets/premortem-report.png)
 
