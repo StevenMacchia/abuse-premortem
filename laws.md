@@ -78,7 +78,7 @@ Have a lawful basis for processing, minimize data and run impact assessments for
 
 ### EU AI Act: transparency duties
 
-From August 2026, tell people when they are interacting with an AI system, and mark AI-generated or manipulated content, including deepfakes, in a machine-readable way. Check for any changes to timelines.
+Since 2 August 2026, tell people when they are interacting with an AI system, and mark AI-generated or manipulated content, including deepfakes, in a machine-readable way. Generative AI systems already on the market before that date have until 2 December 2026 to add the marking.
 
 ### EU anti-money-laundering rules, PSD2 and MiCA
 

@@ -2,7 +2,7 @@
 
 > **How will people misuse what we're about to launch, and what do we do about it first?**
 
-Answer 12 plain-language questions about a product or feature. Get a scored risk register, the five things to do first, a launch checklist with owners, and the laws that likely apply, before anyone gets hurt.
+Answer 12 plain-language questions about a product or feature. Get a scored risk register, the five things to do first, a launch checklist with owners, and the laws that likely apply (each linked to its official source), before anyone gets hurt.
 
 **[Try it live](https://stevenmacchia.github.io/ts-workbench/#premortem)** · part of [T&S Workbench](https://github.com/stevenmacchia/ts-workbench) · free, no sign-up
 
@@ -41,6 +41,8 @@ The tool's knowledge, published as open content you can read, reuse and adapt.
 ## More screenshots
 
 ![premortem](assets/premortem.png)
+
+![premortem-laws](assets/premortem-laws.png)
 
 > **Not legal advice.** The law notes summarize obligations in plain language to help teams ask the right questions. Confirm with counsel before relying on them.
 
