@@ -30,6 +30,7 @@ The tool's knowledge, published as open content you can read, reuse and adapt.
 | [`safeguards.md`](safeguards.md) | 104 safeguards grouped by owner, with effort |
 | [`laws.md`](laws.md) | 33 obligations across 7 jurisdictions, in plain language |
 | [`data/`](data/) | The same catalogs as JSON |
+| [`data/roost-harm-taxonomy.yaml`](data/roost-harm-taxonomy.yaml) | The risk areas in the format of ROOST's starter harm taxonomy, from its open-source agent templates |
 
 ## Use it for
 

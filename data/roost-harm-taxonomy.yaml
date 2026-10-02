@@ -1,0 +1,353 @@
+# Harm taxonomy: T&S Workbench risk areas in ROOST's format
+# Use it as a starting harm taxonomy for ROOST's agent templates. Copy it and edit your copy.
+#
+# Generated from the abuse pre-mortem knowledge base of T&S Workbench (https://stevenmacchia.com/ts-workbench/#premortem).
+# Maintainers: generated; edit the Workbench, not this file.
+#
+# Format: ROOST's harm_taxonomy.yaml starter template (https://github.com/roostorg/model-community/blob/main/agentic_infrastructure/harm_taxonomy.yaml), used under CC BY 4.0
+# (https://creativecommons.org/licenses/by/4.0/). The severity_scale, routing_queues and agent_contract sections are
+# reproduced from that template unchanged. This file is also CC BY 4.0, by Steven Macchia.
+#
+# How the Workbench maps onto it:
+# - One category per Workbench risk area (13). Operational readiness is left out: it describes the team, not a harm.
+# - Where an area matches a ROOST starter category, ROOST's id is kept (sexual_content, harassment, violent_threats, self_harm, off_platform_harm, platform_manipulation).
+#   New ids follow the same style. Four ROOST categories appear here as subcategories: hate_speech (hate), spam (spam),
+#   coordinated_inauthentic_behavior (cib) and impersonation (impersonation).
+# - workbench_id is the one key added to ROOST's category schema: the Workbench's id for the area, so the two can be joined.
+# - default_severity is the median severity of the area's risks (Workbench 1 to 4 = low, medium, high, critical), rounded up when
+#   the median falls between two levels. Each risk keeps its own severity under subcategories.
+# - default_queue is needs_review for every area. Only csam, ai_csam and spam route to auto_action, as in ROOST's template, and the two CSAM
+#   entries also carry mandatory_escalation, as csam does in the template.
+# - default_actions and applies_to_target_kinds use ROOST's decision_action and target_kind enums.
+# - subcategories are the Workbench risks, keyed by the Workbench risk id, each with its own default_severity.
+
+meta:
+  template_version: 0.1
+  companion: entity_schema/abstract_entity_schema.yaml
+
+severity_scale:
+  info:     "Observed, not violative. Logged for context."
+  low:      "Minor violation. Soft action (label, demote)."
+  medium:   "Clear violation. Remove content or restrict actor."
+  high:     "Serious violation. Suspend actor or ban from space."
+  critical: "Imminent harm or legal risk. Auto-action + escalate."
+
+routing_queues:
+  auto_action:         "High-confidence + low-ambiguity. Production agent may act."
+  needs_review:        "Recommendation only. Human reviewer makes the call."
+  needs_classification: "Pattern doesn't fit a category cleanly. Taxonomy gap."
+
+categories:
+
+  # Child safety. New id: ROOST's starter set keeps CSAM under sexual_content and has no child category.
+  child_safety:
+    workbench_id: child
+    description: "Sexual abuse, exploitation and other harm to children: CSAM, grooming, under-age users and the misuse of children's data."
+    default_severity: high
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      csam:
+        description: "Child sexual abuse material (CSAM)"
+        default_severity: critical
+        default_queue: auto_action
+        mandatory_escalation: true
+      grooming:
+        description: "Grooming and online enticement"
+        default_severity: critical
+      age_content:
+        description: "Children exposed to age-inappropriate content"
+        default_severity: high
+      underage:
+        description: "Under-age users on an adult-only service"
+        default_severity: high
+      kids_data:
+        description: "Unlawful collection or use of children's data"
+        default_severity: high
+      compulsive:
+        description: "Manipulative design and compulsive use by young users"
+        default_severity: medium
+
+  # Sexual exploitation. ROOST's id, used here for exploitation rather than consensual adult nudity.
+  sexual_content:
+    workbench_id: sexual
+    description: "Sexual exploitation of people on the service: sextortion, intimate images shared without consent, trafficking and unsolicited sexual content."
+    default_severity: high
+    default_actions: [content_remove, content_hide, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      sextortion:
+        description: "Sextortion"
+        default_severity: high
+      ncii:
+        description: "Intimate images shared without consent"
+        default_severity: high
+      trafficking:
+        description: "Sex trafficking and commercial sexual exploitation"
+        default_severity: critical
+      cyberflash:
+        description: "Unsolicited sexual images and messages"
+        default_severity: medium
+
+  # Fraud and scams. New id. ROOST's impersonation category is the impersonation subcategory here.
+  fraud_and_scams:
+    workbench_id: fraud
+    description: "Deception for money: scams, payment and marketplace fraud, impersonation, promotion abuse and scam ads."
+    default_severity: medium
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      scams:
+        description: "Scams targeting users"
+        default_severity: high
+      app_fraud:
+        description: "Authorised push payment (APP) fraud"
+        default_severity: high
+      market_fraud:
+        description: "Non-delivery, counterfeit and misrepresented goods or services"
+        default_severity: medium
+      payment_fraud:
+        description: "Stolen cards and payment fraud"
+        default_severity: medium
+      promo:
+        description: "Promotion, referral and incentive abuse"
+        default_severity: low
+      impersonation:
+        description: "Impersonation of people, brands or your staff"
+        default_severity: medium
+      ad_abuse:
+        description: "Scam, prohibited and discriminatory ads"
+        default_severity: high
+
+  # Financial crime. New id.
+  financial_crime:
+    workbench_id: fincrime
+    description: "Use of the service to launder money, move funds for crime, evade sanctions or harm vulnerable customers."
+    default_severity: high
+    default_actions: [account_suspend]
+    applies_to_target_kinds: [actor]
+    default_queue: needs_review
+    subcategories:
+      aml:
+        description: "Money laundering and terrorist financing"
+        default_severity: critical
+      mules:
+        description: "Money mules and rented accounts"
+        default_severity: high
+      sanctions:
+        description: "Sanctions violations"
+        default_severity: high
+      fin_vulnerable:
+        description: "Financial harm to vulnerable customers"
+        default_severity: high
+
+  # Account security. New id.
+  account_security:
+    workbench_id: security
+    description: "Takeover of user accounts and the spread of malware and phishing."
+    default_severity: medium
+    default_actions: [account_suspend]
+    applies_to_target_kinds: [actor, content]
+    default_queue: needs_review
+    subcategories:
+      ato:
+        description: "Account takeover"
+        default_severity: medium
+      malware:
+        description: "Malware and phishing"
+        default_severity: medium
+
+  # Harassment and hate. ROOST's id. ROOST's separate hate_speech category is the hate subcategory here.
+  harassment:
+    workbench_id: harass
+    description: "Targeted abuse, hate speech and discrimination against people or groups."
+    default_severity: medium
+    default_actions: [content_remove, timeout, ban_from_space]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      harassment:
+        description: "Harassment, bullying and pile-ons"
+        default_severity: medium
+      hate:
+        description: "Hate speech"
+        default_severity: medium
+      discrimination:
+        description: "Discrimination by hosts, providers or algorithms"
+        default_severity: medium
+
+  # Violent and extremist content. ROOST's id, with a wider scope: extremist and graphic content as well as threats.
+  violent_threats:
+    workbench_id: violent
+    description: "Terrorist and violent extremist content, graphic violence and credible threats of violence."
+    default_severity: high
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      terror:
+        description: "Terrorist and violent extremist content"
+        default_severity: critical
+      graphic:
+        description: "Graphic violence and gore"
+        default_severity: medium
+      threats:
+        description: "Credible threats of violence"
+        default_severity: high
+
+  # Self-harm and wellbeing. ROOST's id.
+  self_harm:
+    workbench_id: selfharm
+    description: "Content that promotes suicide, self-harm or eating disorders, dangerous challenges and harmful health misinformation."
+    default_severity: high
+    default_actions: [content_hide, content_label_attach]
+    applies_to_target_kinds: [content]
+    default_queue: needs_review
+    subcategories:
+      selfharm:
+        description: "Suicide, self-harm and eating-disorder content"
+        default_severity: critical
+      challenges:
+        description: "Dangerous challenges and viral stunts"
+        default_severity: high
+      health_misinfo:
+        description: "Harmful health misinformation"
+        default_severity: high
+
+  # Privacy and surveillance. New id.
+  privacy_and_surveillance:
+    workbench_id: privacy
+    description: "Exposure, harvesting or misuse of personal information, including by staff and through hidden cameras."
+    default_severity: high
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      doxxing:
+        description: "Doxxing and exposure of personal information"
+        default_severity: high
+      scraping:
+        description: "Scraping and bulk harvesting of user data"
+        default_severity: medium
+      insider:
+        description: "Staff or contractor misuse of user data"
+        default_severity: high
+      cameras:
+        description: "Hidden cameras and privacy violations in rentals"
+        default_severity: high
+
+  # Physical safety. ROOST's id, with a wider scope: all harm that reaches people in person.
+  off_platform_harm:
+    workbench_id: physical
+    description: "On-platform contact that leads to harm in person: stalking, assault at meetings, harm to workers and unvetted people on shared accounts."
+    default_severity: critical
+    default_actions: [account_suspend, ban_from_space]
+    applies_to_target_kinds: [actor, content]
+    default_queue: needs_review
+    subcategories:
+      stalking:
+        description: "Stalking and location tracking"
+        default_severity: critical
+      offline:
+        description: "Assault or harm during in-person meetings"
+        default_severity: critical
+      worker_safety:
+        description: "Harm to workers and service providers"
+        default_severity: high
+      acct_sharing:
+        description: "Unvetted people working under someone else's account"
+        default_severity: high
+
+  # Platform integrity. ROOST's id. ROOST's separate spam and coordinated_inauthentic_behavior categories are the spam and cib subcategories here.
+  platform_manipulation:
+    workbench_id: integrity
+    description: "Fake accounts, spam, fake reviews, coordinated inauthentic behavior and automation abuse."
+    default_severity: medium
+    default_actions: [content_demote, cluster_flag, account_suspend]
+    applies_to_target_kinds: [actor, content, cluster]
+    default_queue: needs_review
+    subcategories:
+      fake_accounts:
+        description: "Fake and bot accounts at scale"
+        default_severity: medium
+      spam:
+        description: "Spam and malicious links"
+        default_severity: low
+        default_queue: auto_action
+      fake_reviews:
+        description: "Fake and manipulated reviews"
+        default_severity: medium
+      cib:
+        description: "Coordinated inauthentic behavior and disinformation"
+        default_severity: high
+      api_abuse:
+        description: "Automation abuse through your API"
+        default_severity: medium
+      guest_abuse:
+        description: "Untraceable abuse through guest access"
+        default_severity: medium
+
+  # Illegal and regulated goods. New id.
+  illegal_goods:
+    workbench_id: illegal
+    description: "Sale or promotion of drugs, weapons, counterfeits, infringing goods and gambling."
+    default_severity: medium
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      illegal_goods:
+        description: "Drugs, weapons and other prohibited goods"
+        default_severity: high
+      ip:
+        description: "Counterfeits and copyright infringement"
+        default_severity: medium
+      gambling:
+        description: "Gambling and gambling-like mechanics"
+        default_severity: medium
+
+  # AI misuse. New id.
+  ai_misuse:
+    workbench_id: ai
+    description: "Misuse of AI features: generated CSAM, deepfakes, jailbreaks, harmful companion behavior and prompt injection."
+    default_severity: high
+    default_actions: [content_remove, account_suspend]
+    applies_to_target_kinds: [content, actor]
+    default_queue: needs_review
+    subcategories:
+      ai_csam:
+        description: "AI-generated child sexual abuse material"
+        default_severity: critical
+        default_queue: auto_action
+        mandatory_escalation: true
+      deepfakes:
+        description: "Deceptive or sexual deepfakes of real people"
+        default_severity: high
+      jailbreak:
+        description: "Jailbreaks for dangerous information"
+        default_severity: high
+      companion:
+        description: "Emotional dependency and harmful AI companion responses"
+        default_severity: high
+      prompt_injection:
+        description: "Prompt injection and AI agent misuse"
+        default_severity: medium
+
+agent_contract:
+  label_binding: |
+    Values used in Report.category and the `category` field of
+    harm_labels (see signals.yaml) MUST be a category id from this
+    file. Subcategory ids are also valid where finer routing helps.
+  severity_binding: |
+    ModerationDecision.severity SHOULD default to the category's
+    default_severity unless evidence justifies escalation/de-escalation.
+  action_binding: |
+    ModerationDecision.action MUST be drawn from the category's
+    default_actions unless a playbook overrides with justification.
+  unknown_patterns: |
+    If a pattern does not fit any category, route to
+    `needs_classification` rather than forcing a label. New
+    categories should be proposed via PR, not invented at runtime.
